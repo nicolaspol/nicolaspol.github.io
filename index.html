@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<Html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Nicolas Pollak Assignment Demo</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.2/dist/instantsearch.min.css">
+    <link rel="stylesheet" type="text/css" href="bonus.css">
+</head>
+
+<body>
+  <header>
+    <div>
+      <!-- Below is the search bar displayed to the user -->
+       <input id="search-input" placeholder="What are you looking for today ? Cellphones ?">
+    </div>
+  </header>
+
+  <main>
+<!--We include here the 2 divs which will contain the results and the pagination-->
+      <div id="hits"></div>
+      <div id="pagination"></div>
+   </main>
+<!-- script to design the information contains in the hit-->  
+   <script type="text/html" id="hit-template">
+  	<div class="hit">
+    	<div class="hit-image">
+      		<img src="{{image}}" alt="{{name}}">
+    	</div>
+    	<div class="hit-content">
+      		<h3 class="hit-price">${{price}}</h3>
+      		<h2 class="hit-name">{{{_highlightResult.name.value}}}</h2>
+      		<p class="hit-description">{{{_highlightResult.description.value}}}</p>
+    	</div>
+  	</div>
+	</script>
+  <!-- Scripts for instantsearch.js library from Algolia and the access to our index -->
+   <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.2"></script>
+   <script src="bonus.js"></script>
+</body>
+</Html>
+
+

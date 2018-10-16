@@ -1,0 +1,10 @@
+{
+  "name": "product-challenge",
+  "version": "1.0.0",
+  "description": "Best Buy Product Challenge Algolia",
+  "author": "Nicolas POLLAK",
+  "dependencies": {
+    "algoliasearch": "^3.30.0",
+    "lodash.chunk": "^4.2.0"
+  }
+}
